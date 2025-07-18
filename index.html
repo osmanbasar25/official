@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Osman Basar - Software Developer</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
     <style>
@@ -52,11 +49,25 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Button Glow Effect */
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+            animation: pulse-glow 2s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from {
+                box-shadow: 0 0 10px rgba(56, 189, 248, 0.4), 0 0 20px rgba(56, 189, 248, 0.2);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(56, 189, 248, 0.8), 0 0 30px rgba(56, 189, 248, 0.4);
+            }
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-white">Osman Basar</a>
@@ -71,7 +82,6 @@
                 <i data-feather="menu"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-800">
             <a href="#home" class="block py-2 px-6 text-white hover:bg-slate-700">Home</a>
             <a href="#about" class="block py-2 px-6 text-white hover:bg-slate-700">About</a>
@@ -81,7 +91,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center bg-gradient-hero relative overflow-hidden">
         <div id="particles-js" class="absolute inset-0"></div>
         <div class="container mx-auto px-6 text-center z-10">
@@ -94,14 +103,13 @@
             <p class="max-w-3xl mx-auto text-gray-300 mb-10">
                 I build modern, responsive, and efficient web applications with a passion for clean code and user-centric design.
             </p>
-            <a href="#projects" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+            <a href="#projects" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 btn-glow">
                 View My Work
             </a>
         </div>
     </section>
 
     <main>
-        <!-- About Section -->
         <section id="about" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-5 gap-12 items-center reveal">
@@ -129,12 +137,10 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="py-20 md:py-32 bg-slate-900/50">
             <div class="container mx-auto px-6">
                 <h2 class="section-title text-white reveal">My Projects</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Card 1 -->
                     <div class="card-bg rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 reveal">
                         <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Project+One" 
                              onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=Image+Not+Found';"
@@ -153,7 +159,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project Card 2 -->
                     <div class="card-bg rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 100ms;">
                         <img src="https://placehold.co/600x400/1e293b/6d28d9?text=Project+Two" 
                              onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=Image+Not+Found';"
@@ -172,7 +177,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project Card 3 -->
                     <div class="card-bg rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 200ms;">
                         <img src="https://placehold.co/600x400/1e293b/db2777?text=Project+Three" 
                              onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=Image+Not+Found';"
@@ -195,12 +199,10 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
                 <h2 class="section-title text-white reveal">My Technical Skills</h2>
                 <div class="grid md:grid-cols-2 gap-10 reveal">
-                    <!-- Skill Item -->
                     <div class="skill-item">
                         <div class="flex justify-between mb-1">
                             <span class="text-base font-medium text-sky-300">JavaScript (ES6+)</span>
@@ -210,7 +212,6 @@
                             <div class="bg-sky-500 h-2.5 rounded-full skill-bar-fill" data-width="95%"></div>
                         </div>
                     </div>
-                    <!-- Skill Item -->
                     <div class="skill-item">
                         <div class="flex justify-between mb-1">
                             <span class="text-base font-medium text-sky-300">React & Next.js</span>
@@ -220,8 +221,7 @@
                             <div class="bg-sky-500 h-2.5 rounded-full skill-bar-fill" data-width="90%"></div>
                         </div>
                     </div>
-                     <!-- Skill Item -->
-                    <div class="skill-item">
+                     <div class="skill-item">
                         <div class="flex justify-between mb-1">
                             <span class="text-base font-medium text-sky-300">Node.js & Express</span>
                             <span class="text-sm font-medium text-sky-300">85%</span>
@@ -230,8 +230,7 @@
                             <div class="bg-sky-500 h-2.5 rounded-full skill-bar-fill" data-width="85%"></div>
                         </div>
                     </div>
-                     <!-- Skill Item -->
-                    <div class="skill-item">
+                     <div class="skill-item">
                         <div class="flex justify-between mb-1">
                             <span class="text-base font-medium text-sky-300">Python & Django</span>
                             <span class="text-sm font-medium text-sky-300">80%</span>
@@ -240,8 +239,7 @@
                             <div class="bg-sky-500 h-2.5 rounded-full skill-bar-fill" data-width="80%"></div>
                         </div>
                     </div>
-                     <!-- Skill Item -->
-                    <div class="skill-item">
+                     <div class="skill-item">
                         <div class="flex justify-between mb-1">
                             <span class="text-base font-medium text-sky-300">Databases (SQL & NoSQL)</span>
                             <span class="text-sm font-medium text-sky-300">88%</span>
@@ -250,8 +248,7 @@
                             <div class="bg-sky-500 h-2.5 rounded-full skill-bar-fill" data-width="88%"></div>
                         </div>
                     </div>
-                     <!-- Skill Item -->
-                    <div class="skill-item">
+                     <div class="skill-item">
                         <div class="flex justify-between mb-1">
                             <span class="text-base font-medium text-sky-300">DevOps (Docker, CI/CD)</span>
                             <span class="text-sm font-medium text-sky-300">75%</span>
@@ -264,7 +261,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-20 md:py-32 bg-slate-900/50">
             <div class="container mx-auto px-6">
                 <div class="text-center reveal">
@@ -283,7 +279,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-slate-900">
         <div class="container mx-auto px-6 py-6 text-center text-gray-500">
             <p>&copy; 2024 Osman Basar. All rights reserved.</p>
@@ -291,7 +286,6 @@
         </div>
     </footer>
 
-    <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
@@ -325,13 +319,13 @@
         // Particles.js configuration
         particlesJS('particles-js', {
             "particles": {
-                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                "number": { "value": 120, "density": { "enable": true, "value_area": 800 } }, // Increased number of particles
                 "color": { "value": "#38bdf8" },
                 "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 } },
-                "opacity": { "value": 0.5, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
-                "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } },
-                "line_linked": { "enable": true, "distance": 150, "color": "#38bdf8", "opacity": 0.2, "width": 1 },
-                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } }
+                "opacity": { "value": 0.6, "random": true, "anim": { "enable": true, "speed": 0.5, "opacity_min": 0.1, "sync": false } }, // Adjusted opacity for smoother animation
+                "size": { "value": 2.5, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, // Slightly smaller size
+                "line_linked": { "enable": true, "distance": 120, "color": "#38bdf8", "opacity": 0.25, "width": 1 }, // Adjusted distance and opacity
+                "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } // Smoother movement speed
             },
             "interactivity": {
                 "detect_on": "canvas",
